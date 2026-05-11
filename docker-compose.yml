@@ -1,0 +1,36 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: savestack-postgres
+    environment:
+      POSTGRES_USER: savestack
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: savestack
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: savestack-redis
+    ports:
+      - "6379:6379"
+
+  backend:
+    build:
+      context: ./backend
+    container_name: savestack-backend
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://savestack:changeme@postgres:5432/savestack
+      REDIS_URL: redis://redis:6379/0
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./backend:/app
+
+volumes:
+  postgres_data:

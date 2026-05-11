@@ -1,0 +1,11 @@
+[project]
+name = "savestack-backend"
+version = "0.1.0"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "sqlalchemy",
+    "asyncpg",
+    "redis",
+    "pydantic-settings"
+]
