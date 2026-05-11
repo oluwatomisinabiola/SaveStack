@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Environment / secrets — NEVER commit these
+.env
+.env.local
+*.pem
+
+# Editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Docker
+*.log
+
+# Alembic — keep migrations, ignore local DB dumps
+*.sqlite
+*.d
