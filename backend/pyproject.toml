@@ -7,5 +7,9 @@ dependencies = [
     "sqlalchemy",
     "asyncpg",
     "redis",
-    "pydantic-settings"
+    "pydantic-settings",
+    "python-jose[cryptography]",
+    "passlib[bcrypt]",
+    "bcrypt==4.0.1",
+    "python-multipart"
 ]
