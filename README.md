@@ -26,20 +26,6 @@ SaveStack runs as three orchestrated services via Docker Compose:
 
 A double-entry ledger pattern is used for all financial state. Balances are derived from immutable ledger entries, with database-enforced constraints for idempotency under concurrent webhook deliveries.
 
-## Progress
-
-- [x] Docker Compose setup (Postgres, Redis, FastAPI)
-- [x] JWT-based authentication (signup, login)
-- [x] Alembic migrations for schema evolution
-- [x] Double-entry ledger schema (users, accounts, deposits, ledger_entries)
-- [x] Pure ledger math with comprehensive unit tests
-- [ ] Stripe Checkout integration
-- [ ] Idempotent Stripe webhook handler with row-level locking
-- [ ] Concurrent webhook stress test (90+ deposits, zero double-counting)
-- [ ] Coinbase WebSocket subscriber
-- [ ] Live price broadcasting with sub-200ms latency
-- [ ] React frontend dashboard
-- [ ] Deployment + demo
 
 ## Getting started
 
