@@ -14,7 +14,7 @@ Originated at the Capital One Tech Summit Hackathon 2026 (3rd place); expanded i
 - **Frontend:** React, Vite, TypeScript, Tailwind
 - **Integrations:** Stripe (test mode), Coinbase Advanced Trade WebSocket
 - **Infra:** Docker Compose
-- **Testing:** pytest
+- **Testing:** pytest.
 
 ## Architecture
 
